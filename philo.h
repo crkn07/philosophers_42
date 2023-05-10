@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:57:00 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/09 12:06:10 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:31:54 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ typedef struct s_data
 }t_data;
 
 void	exit_error(char *msg);
-
+int		ft_atoi(const char *str);
 
 #endif
