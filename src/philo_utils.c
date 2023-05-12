@@ -6,11 +6,11 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 14:50:33 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/10 16:18:00 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/12 15:11:12 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../includes/philo.h"
 
 void	exit_error(char *msg)
 {

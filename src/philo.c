@@ -6,11 +6,11 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:56:18 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/10 17:30:50 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/12 14:42:01 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../includes/philo.h"
 
 ft_init(t_data *data, int argc, char **argv)
 {
