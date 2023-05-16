@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:57:00 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/12 17:36:30 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:58:03 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@
 
 typedef struct s_philo
 {
-	int			meals;
-	int			position;
-	int			left_fork;
-	int			right_fork;
-	int 		last_meal;
+	int				meals;
+	int				id;
+	int				position;
+	int				left_fork;
+	int				right_fork;
+	int 			count_meal;
+	int 			last_meal;
+	int 			status;
+	int				eating;
+	unsigned long	tt_die;
+	pthread_mutex_t	lock;
+	struct s_data	*st_data;
 }t_philo;
 
 typedef struct s_data
@@ -35,6 +42,7 @@ typedef struct s_data
 	int				nbr_meals;
 	int				nbr_philo;
 	int				dead;
+	int				end;
 	unsigned long	death_time;
 	unsigned long	eat_time;
 	unsigned long	sleep_time;
@@ -47,6 +55,6 @@ typedef struct s_data
 
 void	exit_error(char *msg);
 int		ft_atoi(const char *str);
-int		ft_init_data(t_data *data, char **argv, int argc);
+int		ft_init_data(t_data *data, int argc, char **argv);
 
 #endif
