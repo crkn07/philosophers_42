@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:57:00 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/16 15:58:03 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/16 16:17:07 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ typedef struct s_data
 void	exit_error(char *msg);
 int		ft_atoi(const char *str);
 int		ft_init_data(t_data *data, int argc, char **argv);
+int		ft_create_philo(t_data *data);
 
 #endif
