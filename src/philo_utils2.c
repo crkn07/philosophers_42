@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:20:50 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/16 15:58:15 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:56:40 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,19 @@ int	ft_create_philo(t_data *data)
 		pthread_mutex_init(&data->philo[i].lock, NULL);
 		i++;
 	}
+}
+
+int	ft_create_forks(t_data *data)
+{
+	int	i;
+
+	i = 0;
+	while(i < data->nbr_philo)
+	{
+		pthread_mutex_init(&data->forks[i], NULL);
+		i++;
+	}
+	i = 0;
+	data->philo[i].left_fork = &data->forks[0];
+	
 }
