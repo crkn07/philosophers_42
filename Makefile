@@ -6,7 +6,7 @@
 #    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 16:26:37 by crtorres          #+#    #+#              #
-#    Updated: 2023/05/12 14:42:23 by crtorres         ###   ########.fr        #
+#    Updated: 2023/05/17 11:43:41 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = $(addprefix $(SRC_PATH), $(SRC))
 
 OBJS = $(addprefix $(DOT_O)/, $(SRC:%.c=%.o))
 
-all: make_lib $(NAME) $(DOT_O)
+all: $(NAME) $(DOT_O)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
@@ -38,7 +38,7 @@ $(DOT_O):
 	@mkdir -p $(DOT_O)
 
 $(DOT_O)/%.o: $(SRC_PATH)/%.c | $(DOT_O)
-	$(PURPLE) COMPILING PUSH_SWAP... $(RESET)
+	$(PURPLE) COMPILING PHILOSOPHERS... $(RESET)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 

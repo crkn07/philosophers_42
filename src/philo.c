@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:56:18 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/16 16:57:25 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/18 18:44:49 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ ft_init(t_data *data, int argc, char **argv)
 {
 	ft_init_data(data, argc, argv);
 	ft_create_philo(data);
+	ft_create_forks(data);
 }
 
 int	ft_check_args(int argc, char **argv)
