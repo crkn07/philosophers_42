@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:20:50 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/18 11:56:40 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:59:24 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,6 @@ int	ft_create_forks(t_data *data)
 	}
 	i = 0;
 	data->philo[i].left_fork = &data->forks[0];
+	data->philo[i].right_fork = &data->forks[data->nbr_philo - 1];
 	
 }
