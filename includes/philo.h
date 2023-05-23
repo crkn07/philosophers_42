@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:57:00 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/18 18:44:22 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/23 17:02:46 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_philo
 	int 			status;
 	int				eating;
 	unsigned long	tt_die;
-	pthread_mutex_t	lock;
+	pthread_mutex_t lock;
 	struct s_data	*st_data;
 }t_philo;
 
