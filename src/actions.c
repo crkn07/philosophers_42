@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 15:10:54 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/23 17:09:46 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:12:09 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,20 @@ void	*routine(void *pointer)
 	
 }
 
+void	*count_meals(void *pointer)
+{
+	t_philo	*philo;
+
+	philo = pointer;
+	pthread_mutex_lock(&philo->st_data->lock);
+	philo->st_data->end++;
+	philo->count_meal++;
+	pthread_mutex_unlock(&philo->st_data->lock);
+}
+
 void	*supervisor(void *pointer)
 {
-	t_philo *philo;
+	t_philo 		*philo;
 	unsigned long	time;
 	
 	philo = pointer;
@@ -37,8 +48,13 @@ void	*supervisor(void *pointer)
 			if (philo->st_data->dead == 0)
 			{
 				printf("%ld %d is died\n", time, philo->id);
+				philo->st_data->dead = 1;
 			}
+			pthread_mutex_unlock(&philo->st_data->write);
 		}
+		if (philo->count_meal = philo->st_data->nbr_meals)
+			count_meals(philo);
+		pthread_mutex_unlock(&philo->lock);
 	}
 }
 
