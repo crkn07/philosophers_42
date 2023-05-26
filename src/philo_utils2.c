@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:20:50 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/18 18:31:37 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:01:35 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_init_data(t_data *data, int argc, char **argv)
 {
-	data->nbr_philo = ft_atoi(argv[1]);
+	data->nbr_philo = (unsigned long)argv[1];
 	data->philo_id = malloc(sizeof(pthread_t) * data->nbr_philo);
 	if (!data->philo_id)
 		exit_error("alloc memory philo_id failed\n");
-	data->death_time = (unsigned long)ft_atoi(argv[2]);
+	data->death_time = (unsigned long)argv[2];
 	data->philo = malloc(sizeof(t_philo) * data->nbr_philo);
 	if (!data->philo)
 		exit_error("failed to alloc memory philosopher\n");
-	data->eat_time = (unsigned long)ft_atoi(argv[3]);
-	data->sleep_time = (unsigned long)ft_atoi(argv[4]);
+	data->eat_time = (unsigned long)argv[3];
+	data->sleep_time = (unsigned long)argv[4];
 	data->forks = malloc(sizeof(pthread_mutex_t) * data->nbr_philo);
 	if (!data->forks)
 		exit_error("failed to alloc memory forks\n");

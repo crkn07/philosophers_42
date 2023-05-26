@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:56:18 by crtorres          #+#    #+#             */
-/*   Updated: 2023/05/18 18:44:49 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:57:45 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,12 @@ int	ft_check_args(int argc, char **argv)
 		exit_error("invalid number of arguments\n");
 	while (j < argc)
 	{
-		while (argv[j][i])
+		while (argv[j][++i])
 		{
 			if (argv[j][i] >= '0' && argv[j][i] <= '9')
 				return (ft_atoi(argv[j]));
 			else
 				exit_error("invalid type of argument\n");
-			i++;
 		}
 		j++;
 	}
